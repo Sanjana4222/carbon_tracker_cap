@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Carbon Footprint Tracker</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        h1, h2 {
+            margin: 0;
+        }
+        section {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .dashboard-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .progress {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #e7f3fe;
+            border-left: 5px solid #2196F3;
+        }
+        .recommendations {
+            margin-top: 30px;
+        }
+        .recommendation {
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        footer {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body style="font-family: Arial, sans-serif; margin: 0; padding: 0;">
+
+    <!-- Header -->
+    <header style="background-color: #4CAF50; color: white; padding: 10px 20px; display: flex; justify-content: space-between; align-items: center;">
+        <h1 style="margin: 0;">Carbon Footprint Tracker</h1>
+        <nav>
+            <a href="index.html" style="color: white; margin: 0 15px; text-decoration: none;">Home</a>
+            <a href="features.html" style="color: white; margin: 0 15px; text-decoration: none;">Features</a>
+            <a href="how.html" style="color: white; margin: 0 15px; text-decoration: none;">How It Works</a>
+            <a href="blog.html" style="color: white; margin: 0 15px; text-decoration: none;">Blog</a>
+            <a href="about.html" style="color: white; margin: 0 15px; text-decoration: none;">About Us</a>
+            <a href="contact.html" style="color: white; margin: 0 15px; text-decoration: none;">Contact</a>
+        </nav>
+        <a href="profile.html" style="background-color: white; color: #4CAF50; padding: 10px 15px; text-decoration: none; border-radius: 5px;">Profile</a>
+
+    </header>
+     <!-- Dashboard Section -->
+     <section>
+        <div class="dashboard-header">
+            <h2>User Dashboard</h2>
+            <button style="padding: 10px; background-color: #4CAF50; color: white; border: none; border-radius: 4px; cursor: pointer;">Update Data</button>
+        </div>
+
+        <div class="progress">
+            <h3>Your Carbon Emissions</h3>
+            <p>Total Emissions: <strong>2.5 tons CO<sub>2</sub></strong></p>
+            <p>Goal: <strong>2.0 tons CO<sub>2</sub></strong></p>
+            <p>Progress: <strong>75%</strong></p>
+        </div>
+
+        <div class="recommendations">
+            <h3>Personalized Recommendations</h3>
+            <div class="recommendation">
+                <p>1. Use public transportation instead of driving to reduce emissions.</p>
+            </div>
+            <div class="recommendation">
+                <p>2. Consider switching to energy-efficient appliances.</p>
+            </div>
+            <div class="recommendation">
+                <p>3. Reduce meat consumption to lower your carbon footprint.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Existing Content -->
+    <section style="padding: 50px; text-align: center;">
+        <h2 style="font-size: 2em;">Analytics Overview</h2>
+        <canvas id="analyticsChart" style="max-width: 600px; margin: auto;"></canvas>
+    </section>
+    
+    <!-- Additional Content with Pie Chart -->
+    <section style="padding: 50px; text-align: center;">
+        <h2 style="font-size: 2em;">Additional Analytics</h2>
+        <p>Here you can find more detailed analytics and insights.</p>
+        <canvas id="pieChart" style="max-width: 600px; margin: auto;"></canvas>
+    </section>
+    
+    <script>
+        // Sample data for the pie chart
+        const pieCtx = document.getElementById('pieChart').getContext('2d');
+        const pieChart = new Chart(pieCtx, {
+            type: 'pie',
+            data: {
+                labels: ['Transport', 'Energy', 'Waste', 'Food'],
+                datasets: [{
+                    label: 'Carbon Footprint Breakdown',
+                    data: [30, 40, 20, 10],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    title: {
+                        display: true,
+                        text: 'Carbon Footprint Breakdown'
+                    }
+                }
+            }
+        });
+    </script>
+
+
+
+    <!-- Footer -->
+    <footer style="background-color: #4CAF50; color: white; text-align: center; padding: 20px;">
+        <p style="margin: 0;">&copy; 2025 Carbon Footprint Tracker. All rights reserved.</p>
+        <div>
+            <a href="#" style="color: white; margin: 0 10px; text-decoration: none;">Privacy Policy</a> |
+            <a href="#" style="color: white; margin: 0 10px; text-decoration: none;">Terms of Service</a>
+        </div>
+    </footer>
+
+    <script>
+        // Sample data for the chart
+        const ctx = document.getElementById('analyticsChart').getContext('2d');
+        const analyticsChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['January', 'February', 'March', 'April', 'May', 'June'],
+                datasets: [{
+                    label: 'Carbon Emissions',
+                    data: [12, 19, 3, 5, 2, 3],
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carbon Footprint Tracker</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body style="font-family: Arial, sans-serif; margin: 0; padding: 0;">
+
+    <!-- Header -->
+    <header style="background-color: #4CAF50; color: white; padding: 10px 20px; display: flex; justify-content: space-between; align-items: center;">
+        <img src="data:image/jpeg;base64,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" alt="Carbon Footprint Tracker Logo" style="height: 50px; margin-right: 10px;">
+        <h1 style="margin: 0;">Carbon Footprint Tracker</h1>
+        <nav>
+            <a href="#" style="color: white; margin: 0 15px; text-decoration: none;"><i class="fas fa-home"></i> Home</a>
+            <a href="features.html" style="color: white; margin: 0 15px; text-decoration: none;"><i class="fas fa-star"></i> Features</a>
+            <a href="how.html" style="color: white; margin: 0 15px; text-decoration: none;"><i class="fas fa-question-circle"></i> How It Works</a>
+            <a href="blog.html" style="color: white; margin: 0 15px; text-decoration: none;"><i class="fas fa-blog"></i> Blog</a>
+            <a href="about.html" style="color: white; margin: 0 15px; text-decoration: none;"><i class="fas fa-info-circle"></i> About Us</a>
+            <a href="contact.html" style="color: white; margin: 0 15px; text-decoration: none;"><i class="fas fa-envelope"></i> Contact</a>
+        </nav>
+        <a href="signup.html" style="background-color: white; color: #4CAF50; padding: 10px 15px; text-decoration: none; border-radius: 5px;">Get Started</a>
+    </header>
+
+    <!-- Hero Section -->
+    <section style="background-color: #f4f4f4; padding: 50px; text-align: center;">
+        <h2 style="font-size: 2.5em; margin: 0;">Track Your Carbon Footprint, Reduce Your Impact</h2>
+        <p style="font-size: 1.2em; margin: 20px 0;">Join us in making a difference for the planet.</p>
+        <a href="carbon.html" style="background-color: #4CAF50; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px;">Start Tracking Today</a>
+    </section>
+
+    <!-- Key Features -->
+    <section style="padding: 50px; text-align: center;">
+        <h2 style="font-size: 2em;">Key Features</h2>
+        <div style="display: flex; justify-content: space-around; margin-top: 30px;">
+            <div style="width: 30%;">
+                <h3><i class="fas fa-robot"></i> AI-Based Tracking</h3>
+                <p>Utilize advanced AI to monitor your carbon emissions effortlessly.</p>
+            </div>
+            <div style="width: 30%;">
+                <h3><i class="fas fa-plug"></i> API Integration</h3>
+                <p>Connect with your favorite transportation and energy apps.</p>
+            </div>
+            <div style="width: 30%;">
+                <h3><i class="fas fa-user-check"></i> Personalized Recommendations</h3>
+                <p>Receive tailored tips to reduce your carbon footprint.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section style="background-color: #f4f4f4; padding: 50px; text-align: center;">
+        <h2 style="font-size: 2em;">What Our Users Say</h2>
+        <blockquote style="font-style: italic; margin: 20px; font-size: 1.2em;">
+            "This app has changed the way I think about my carbon footprint. Highly recommend!"
+            <footer style="margin-top: 10px;">- Jane Doe</footer>
+        </blockquote>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background-color: #4CAF50; color: white; text-align: center; padding: 20px;">
+        <p style="margin: 0;">&copy; 2025 Carbon Footprint Tracker. All rights reserved.</p>
+        <div>
+            <a href="#" style="color: white; margin: 0 10px; text-decoration: none;">Privacy Policy</a> |
+            <a href="#" style="color: white; margin: 0 10px; text-decoration: none;">Terms of Service</a>
+        </div>
+    </footer>
+
+</body>
+</html>

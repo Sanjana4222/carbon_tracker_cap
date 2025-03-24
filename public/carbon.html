@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carbon Emission Calculator - Carbon Footprint Tracker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        h1, h2 {
+            margin: 0;
+        }
+        section {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            margin-bottom: 5px;
+            display: block;
+        }
+        input, select {
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            width: 100%;
+        }
+        button {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #e7f3fe;
+            border-left: 5px solid #2196F3;
+        }
+        footer {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Carbon Footprint Tracker</h1>
+    </header>
+
+    <!-- Carbon Emission Calculator Section -->
+    <section>
+    <h2>Carbon Emission Calculator</h2>
+    <p>Use this calculator to estimate your carbon emissions based on your daily activities. Fill in the fields below and click "Calculate Emissions" to see your estimated carbon footprint.</p>
+
+        <form id="calculator-form">
+            <label for="miles-driven">Miles Driven (per week):</label>
+            <input type="number" id="miles-driven" name="miles-driven" required>
+
+            <label for="electricity-usage">Electricity Usage (kWh per month):</label>
+            <input type="number" id="electricity-usage" name="electricity-usage" required>
+
+            <label for="gas-usage">Gas Usage (gallons per month):</label>
+            <input type="number" id="gas-usage" name="gas-usage" required>
+
+            <label for="waste-generated">Waste Generated (pounds per month):</label>
+            <input type="number" id="waste-generated" name="waste-generated" required>
+
+            <button type="button" onclick="calculateEmissions()">Calculate Emissions</button>
+        </form>
+
+        <div class="result" id="result" style="display: none;">
+            <h3>Your Estimated Carbon Emissions:</h3>
+            <p id="emission-output"></p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Carbon Footprint Tracker. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function calculateEmissions() {
+            // Get input values
+            const milesDriven = parseFloat(document.getElementById('miles-driven').value);
+            const electricityUsage = parseFloat(document.getElementById('electricity-usage').value);
+            const gasUsage = parseFloat(document.getElementById('gas-usage').value);
+            const wasteGenerated = parseFloat(document.getElementById('waste-generated').value);
+
+            // Calculate emissions (example coefficients)
+            const emissionsFromDriving = milesDriven * 0.404; // CO2 per mile
+            const emissionsFromElectricity = electricityUsage * 0.92; // CO2 per kWh
+            const emissionsFromGas = gasUsage * 19.6; // CO2 per gallon
+            const emissionsFromWaste = wasteGenerated * 0.2; // CO2 per pound of
+                        // Calculate total emissions
+                        const totalEmissions = emissionsFromDriving + emissionsFromElectricity + emissionsFromGas + emissionsFromWaste;
+
+// Display the result
+document.getElementById('emission-output').innerText = `Your estimated carbon emissions are approximately ${totalEmissions.toFixed(2)} kg CO₂ per month.`;
+document.getElementById('result').style.display = 'block';
+}
+</script>
+
+</body>
+</html>

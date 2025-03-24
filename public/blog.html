@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Carbon Footprint Tracker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        h1, h2 {
+            margin: 0;
+        }
+        section {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .post {
+            margin-bottom: 30px;
+            padding: 15px;
+            border-bottom: 1px solid #ccc;
+        }
+        .post h3 {
+            margin: 0;
+            color: #4CAF50;
+            cursor: pointer;
+        }
+        .post p {
+            margin: 10px 0;
+        }
+        .details {
+            display: none;
+            margin-top: 10px;
+        }
+        footer {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+    <script>
+        function toggleDetails(id) {
+            const details = document.getElementById(id);
+            details.style.display = details.style.display === 'none' ? 'block' : 'none';
+        }
+    </script>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Carbon Footprint Tracker Blog</h1>
+    </header>
+
+    <!-- Blog Section -->
+    <section>
+        <h2 style="text-align: center;">Blog</h2>
+
+        <div class="post">
+            <h3 onclick="toggleDetails('details1')">5 Simple Ways to Reduce Your Carbon Footprint</h3>
+            <p>Discover easy and effective strategies to lower your carbon emissions in your daily life.</p>
+            <div id="details1" class="details">
+                <h4>1. Use Public Transportation</h4>
+                <p>Using public transportation instead of driving can significantly reduce your carbon emissions.</p>
+                <h4>2. Reduce Energy Consumption</h4>
+                <p>Switching off lights and unplugging devices when not in use can help save energy.</p>
+                <h4>3. Eat Less Meat</h4>
+                <p>Reducing meat consumption can lower your carbon footprint.</p>
+                <h4>4. Use Reusable Bags</h4>
+                <p>Using reusable bags instead of plastic ones can help reduce waste.</p>
+                <h4>5. Plant Trees</h4>
+                <p>Planting trees helps absorb CO2 from the atmosphere.</p>
+            </div>
+        </div>
+
+        <div class="post">
+            <h3 onclick="toggleDetails('details2')">The Importance of Tracking Your Carbon Footprint</h3>
+            <p>Understanding your carbon footprint is the first step towards making impactful changes.</p>
+            <div id="details2" class="details">
+                <h4>Understanding Your Impact</h4>
+                <p>Tracking your carbon footprint is essential for understanding how your daily activities contribute to climate change.</p>
+                <h4>Setting Goals</h4>
+                <p>Once you know your carbon footprint, you can set realistic goals to reduce it.</p>
+                <h4>Making Informed Choices</h4>
+                <p>Tracking your emissions helps you make informed choices about your lifestyle.</p>
+                <h4>Encouraging Others</h4>
+                <p>By tracking and sharing your carbon footprint journey, you can inspire others to take action.</p>
+            </div>
+        </div>
+
+        <div class="post">
+            <h3 onclick="toggleDetails('details3')">How Technology is Helping the Environment</h3>
+            <p>Explore the role of technology in combating climate change.</p>
+            <div id="details3" class="details">
+                <h4>Renewable Energy Solutions</h4>
+                <p>Technology has enabled the development of renewable energy sources such as solar and wind power.</p>
+                <h4>Carbon Tracking Apps</h4>
+                <p>Various applications help individuals and businesses track their carbon emissions.</p>
+                <h4>Smart Home Technology</h4>
+                <p>Smart home devices can optimize energy usage by automatically adjusting settings.</p>
+                <h4>Innovative Transportation Solutions</h4>
+                <p>Electric vehicles and public transportation apps are revolutionizing how we think about travel.</p>
+            </div>
+        </div>
+
+        <div class="post">
+            <h3 onclick="toggleDetails('details4')">Understanding Carbon Offsetting</h3>
+            <p>Learn about carbon offsetting and how it can help you balance your carbon emissions.</p>
+            <div id="details4" class="details">
+                <h4>What is Carbon Offsetting?</h4>
+                <p>Carbon offsetting is a way to compensate for emissions produced by investing in projects that reduce or capture an equivalent amount of carbon dioxide.</p>
+                <h4>Types of Carbon Offset Projects</h4>
+                <p>Common projects include reforestation and renewable energy initiatives.</p>
+                <h4>How to Offset Your Carbon Footprint</h4>
+                <p>Individuals and businesses can purchase carbon offsets from certified providers.</p>
+                <h4>The Benefits of Carbon Offsetting</h4>
+                <p>Offsetting carbon emissions can help achieve carbon neutrality and support sustainable development.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2023 Carbon Footprint Tracker. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

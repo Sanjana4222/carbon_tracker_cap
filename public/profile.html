@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile - Carbon Footprint Tracker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+        }
+        section {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>User Profile</h1>
+    </header>
+
+    <!-- Profile Section -->
+    <section>
+        <h2>Profile Information</h2>
+        <p>Name: John Doe</p>
+        <p>Email: johndoe@example.com</p>
+        <p>Account Created: January 1, 2023</p>
+        <button style="padding: 10px; background-color: #4CAF50; color: white; border: none; border-radius: 4px; cursor: pointer;" onclick="showEditForm()">Edit Profile</button>
+        <div id="editForm" style="display:none; margin-top: 20px;">
+            <h3>Edit Profile</h3>
+            <label for="name">Name:</label>
+            <input type="text" id="name" value="John Doe" style="width: 100%; padding: 10px; margin-bottom: 10px;">
+            <label for="email">Email:</label>
+            <input type="email" id="email" value="johndoe@example.com" style="width: 100%; padding: 10px; margin-bottom: 10px;">
+            <button style="padding: 10px; background-color: #4CAF50; color: white; border: none; border-radius: 4px; cursor: pointer;" onclick="saveProfile()">Save Changes</button>
+        </div>
+
+        <br><br>
+        <button style="padding: 10px; background-color: #f44336; color: white; border: none; border-radius: 4px; cursor: pointer;" onclick="logout()">Logout</button>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Carbon Footprint Tracker. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function showEditForm() {
+            document.getElementById('editForm').style.display = 'block';
+        }
+
+        function saveProfile() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            alert(`Profile updated:\nName: ${name}\nEmail: ${email}`);
+            // Here you would typically send the updated data to the server
+        }
+
+        function logout() {
+
+            // Logic for logging out the user
+            alert("You have been logged out.");
+            window.location.href = "login.html"; // Redirect to login page
+        }
+    </script>
+
+</body>
+</html>
